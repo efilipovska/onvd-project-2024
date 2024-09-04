@@ -1,0 +1,302 @@
+/*
+==============================================
+    Header & Footer
+==============================================
+*/
+header, footer {
+    background-color: hsla(207,96%,73%,0.97);
+}
+#nav_img {
+     width: 7.5rem;
+     height: auto;
+ }
+.navbar_link:hover {
+    color: hsla(218, 83%, 95%, 0.99);
+}
+.nav_dp_menu {
+    background-color: hsl(208, 100%, 75%);
+    border-color: hsla(217, 19%, 38%, 0.1);
+}
+.nav_dp_menu a:hover {
+    background-color: hsla(218, 83%, 95%, 0.2);
+    color: hsla(218, 83%, 95%, 0.99);
+}
+footer div {
+    padding-top: 7rem;
+    padding-bottom: 1.2rem;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+footer li {
+    padding-right: 1rem;
+}
+footer li:last-child {
+    padding-right: 0;
+}
+
+
+/*
+==============================================
+    Container
+==============================================
+*/
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.custom_container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+/*
+==============================================
+    Hero
+==============================================
+*/
+#hero {
+    background-image: url('/images/backgrounds/hero.png');
+}
+.hero {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(207,96%,73%,0.3);
+}
+.content {
+    position: relative;
+    z-index: 1;
+    padding-top: 6.25rem;
+}
+#hero_btn {
+    background-color: hsla(207,96%,73%,0.97);
+    border-radius: 1.56rem;
+    margin-left: -2.5rem;
+}
+#hero_btn:hover {
+    background-color: hsl(209, 97%, 82%);
+}
+.form-control {
+    border-radius: 1.56rem;
+}
+.input-group {
+    padding-top: 0.94rem;
+    padding-bottom: 1.88rem;
+}
+#result {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    opacity: 0;
+    padding: 0;
+    margin-top: 0.63rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#result.show {
+    max-height: 60rem;
+    opacity: 1;
+    padding: 0.63rem;
+}
+#not_found {
+    display: none;
+    margin-bottom: 1.5rem;
+    padding: 0.63rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: hsl(0, 0%, 17%);
+    background-color: hsla(0,0%,0%,0.1);
+    backdrop-filter: blur(0.3rem);
+    border-radius: 0.63rem;
+}
+
+
+/*
+==============================================
+    Intro & Contact
+==============================================
+*/
+.intro_title {
+    padding-top: 5.31rem;
+    padding-bottom: 1.56rem;
+}
+#intro_open {
+    background-image: linear-gradient(hsla(207,96%,73%,0.97) 5%, hsl(255,100%,100%) 80%);
+}
+#intro_btn {
+    background-color: hsla(207,96%,73%,0.97);
+    width: 100%;
+    margin-bottom: 1.56rem;
+}
+#intro_btn:hover {
+    background-color: hsl(209, 97%, 82%);
+}
+
+#contact {
+    background-image: linear-gradient(hsl(255,100%,100%), hsla(207,96%,73%,0.97));
+}
+#mail {
+    font-size: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+#mail div {
+    background-color: hsla(255,100%,100%, 0.67);
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 1.2rem;
+}
+
+
+/*
+==============================================
+    Subjects in main
+==============================================
+*/
+#subjects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin: 0.94rem auto;
+}
+.subject {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.94rem;
+    border: 0.06rem solid hsla(0,0%,0%,0.1);
+    border-radius: 1.56rem;
+}
+.subject_img {
+    width: 6.25rem;
+    height: 6.25rem;
+    margin-bottom: 2.19rem;
+    opacity: 0.65;
+}
+.subject_img:hover {
+    opacity: 1;
+    transition: 0.15s;
+    cursor: pointer;
+}
+#subjects a {
+    text-decoration: none;
+    color: var(--bs-body-color);
+}
+
+
+/*
+==============================================
+    Subjects
+==============================================
+*/
+.btn_collapse {
+    margin-bottom: 0.63rem;
+    background-color: hsla(207,96%,73%,0.97);
+    border-radius: 1.56rem;
+}
+.btn_collapse:hover {
+    background-color: hsl(209, 97%, 82%);
+}
+
+.pdfs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.94rem;
+}
+.pdfs img {
+    width: 2.19rem;
+    height: auto;
+}
+
+.tutors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+.profile_icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.94rem;
+    border: none;
+    background-color: inherit;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
+    padding: 0.65rem;
+}
+.profile_icons:hover {
+    border-color: var(--bs-body-color);
+    border-radius: 1.56rem;
+    box-shadow: 0.1rem 0.1rem 1rem hsla(0, 0%, 0%, 0.12);
+}
+.profile_icons img{
+    width: 9.38rem;
+    height: auto;
+}
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.94rem;
+    padding-right: 1.5rem;
+}
+.modal-header img {
+    width: 4.56rem;
+    height: auto;
+}
+.modal-body img {
+    width: 1.46rem;
+    height: auto;
+}
+.modal-body span {
+    padding-bottom: 0.5rem;
+}
+
+.btn_dropdown {
+    background-color: hsl(0, 0%, 82%);
+    margin-bottom: 0.85rem;
+}
+.btn_dropdown:hover, .dp_menu a:hover {
+    background-color: hsl(0, 0%, 72%);
+}
+.dp_menu {
+    background-color: hsl(0, 0%, 82%);
+}
+
+#no_matches {
+    margin: 2.5rem;
+    font-size: 1.45rem;
+    text-align: center;
+    color: hsl(0, 0%, 52%);
+}

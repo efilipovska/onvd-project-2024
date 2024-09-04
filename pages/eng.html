@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesno do matura</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-sm">
+        <div class="container flex_row">
+            <img src="/images/nav_img.png" alt="Лесно до матура" id="nav_img">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible_navbar" style="border: none">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="collapsible_navbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link navbar_link" href="../index.html#hero">Пребарај професор</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar_link" href="../index.html#intro_open">Зошто матура</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle navbar_link" href="#" role="button" data-bs-toggle="dropdown">Предмети</a>
+                        <ul class="dropdown-menu nav_dp_menu">
+                            <li><a class="dropdown-item" href="math.html">Математика</a></li>
+                            <li><a class="dropdown-item" href="mk.html">Македонски</a></li>
+                            <li><a class="dropdown-item" href="#">Ангиски</a></li>
+                            <li><a class="dropdown-item" href="fr.html">Француски</a></li>
+                            <li><a class="dropdown-item" href="gr.html">Германски</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar_link" href="../index.html#contact">Придружи се!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- INTRO -->
+<section class="hero" style="background-image: url('/images/backgrounds/eng_bg.png')">
+    <div class="overlay"></div>
+    <div class="container content">
+        <h1 class="text-center intro_title">Англиски јазик</h1>
+        <p>Тестот по Англиски јазик содржи 7 прашања со вкупно 33 барања кои учениците ги одговараа за време од 180 минути.<br>Тестот има цел да ги провери знаењата и способностите на учениците од три подрачја: Читање со разбирање, Примена на јазични елементи и Пишување.</p>
+
+        <button id="intro_btn" class="btn btn_collapse" data-bs-toggle="collapse" data-bs-target="#eng_collapse" onclick="changeButtonText()">Прикажи повеќе!</button>
+
+        <div id="eng_collapse" class="collapse">
+            <p>Тестот ја има следната структура: 15 прашања од затворен тип од подрачјето Читање со разбирање кои се бодуваа со по еден бод, 30 прашања од отворен тип со куси одговори од подрачјето Примена на јазични елементи и 2 прашања од отворен тип со подолг одговор од подрачјето Пишување чиј вкупен број бодови изнесува 25. Максималниот број бодови на тестот е 70.</p>
+            <p>Екстерниот испит по Англиски јазик има цел да ја провери оспособеноста на учениците за читање, пишување и примена на јазичните елементи во контекст:</p>
+            <ul>
+                <li>Со делот Читање се проверува: колку учениците ја разбираат главната идеја во даден текст на англиски јазик, како ја разбираат логичната поврзаност на речениците во текст и колку ги разбираат лексичките и граматичките обрасци во текстот.</li>
+                <li>Со делот Пишување се проверуваат две цели – оспособеноста на учениците да напишат кусо писмо, како и оспособеноста да напишат есеј на позната тема.</li>
+                <li>Со делот Примена на јазичните елементи во контекст се проверува оспособеноста на учениците за примена на лексичките единици, граматичките структури и идиоми во контекст.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- TESTS -->
+<section class="container">
+    <h1 class="text-center intro_title">Тестови</h1>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-action">
+            <a class="nav-link" target="_blank" href="http://www.matura.gov.mk/data_files/state_graduate/mk/3559_Angliski%20jazik%20JUNI%202024.pdf">
+                <div class="pdfs">
+                    <img src="/images/pdf_icon.png" alt="PDF" class="pdf_icon">
+                    <h6>Англиски јазик тест 2024</h6>
+                </div>
+            </a>
+        </li>
+        <li class="list-group-item list-group-item-action">
+            <a class="nav-link" target="_blank" href="http://www.matura.gov.mk/data_files/state_graduate/mk/2338_MATURA_Angliski_jazik_2023.pdf">
+                <div class="pdfs">
+                    <img src="/images/pdf_icon.png" alt="PDF" class="pdf_icon">
+                    <h6>Англиски јазик тест 2023</h6>
+                </div>
+            </a>
+        </li>
+        <li class="list-group-item list-group-item-action">
+            <a class="nav-link" target="_blank" href="http://www.matura.gov.mk/data_files/state_graduate/mk/2311_MATURA_Angliski_jazik_avgust_2022.pdf">
+                <div class="pdfs">
+                    <img src="/images/pdf_icon.png" alt="PDF" class="pdf_icon">
+                    <h6>Англиски јазик тест 2022 (август)</h6>
+                </div>
+            </a>
+        </li>
+        <li class="list-group-item list-group-item-action">
+            <a class="nav-link" target="_blank" href="http://www.matura.gov.mk/data_files/state_graduate/mk/2248_MATURA_Angliski_jazik_juni_2022.pdf">
+                <div class="pdfs">
+                    <img src="/images/pdf_icon.png" alt="PDF" class="pdf_icon">
+                    <h6>Англиски јазик тест 2022 (јуни)</h6>
+                </div>
+            </a>
+        </li>
+        <li class="list-group-item list-group-item-action">
+            <a class="nav-link" target="_blank" href="http://www.matura.gov.mk/data_files/state_graduate/mk/2203_MATURA_Angliski_jazik_2020_2021.pdf">
+                <div class="pdfs">
+                    <img src="/images/pdf_icon.png" alt="PDF" class="pdf_icon">
+                    <h6>Англиски јазик збирка тестови 2020 &ndash; 2021</h6>
+                </div>
+            </a>
+        </li>
+        <li class="list-group-item list-group-item-action">
+            <a class="nav-link" target="_blank" href="http://www.matura.gov.mk/data_files/state_graduate/mk/2137_MATURA_Angliski_jazik_2016_2019.pdf">
+                <div class="pdfs">
+                    <img src="/images/pdf_icon.png" alt="PDF" class="pdf_icon">
+                    <h6>Англиски јазик збирка тестови 2016 &ndash; 2019</h6>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- TUTORS -->
+<section class="container">
+    <h1 class="text-center intro_title">Тутори</h1>
+    <div class="container flex_row">
+        <div class="dropdown">
+            <button type="button" class="btn dropdown-toggle btn_dropdown" data-bs-toggle="dropdown">Сортирај</button>
+            <ul class="dropdown-menu dp_menu">
+                <li><a id="sortLH" class="dropdown-item" href="#" onclick="event.preventDefault()">Цена (најниска)</a></li>
+                <li><a id="sortHL" class="dropdown-item" href="#" onclick="event.preventDefault()">Цена (највисока)</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button type="button" class="btn dropdown-toggle btn_dropdown" data-bs-toggle="dropdown">Филтрирај</button>
+            <ul class="dropdown-menu dp_menu">
+                <li><a id="all" class="dropdown-item" href="#" onclick="event.preventDefault()">Прикажи ги сите</a></li>
+                <li><a id="online" class="dropdown-item" href="#" onclick="event.preventDefault()">Online часови</a></li>
+                <li><a id="person" class="dropdown-item" href="#" onclick="event.preventDefault()">Часови со физичко присуство</a></li>
+                <li><a id="both" class="dropdown-item" href="#" onclick="event.preventDefault()">По избор (двата типа)</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tutors">
+        <button type="button" class="profile_icons" data-price="800" data-mode="both" data-bs-toggle="modal" data-bs-target="#zorica">
+            <img src="/images/profile_icons/zorica.png" alt="PNG">
+            <span>проф. д-р Зорица Здравеска</span>
+        </button>
+        <button type="button" class="profile_icons" data-price="600" data-mode="online" data-bs-toggle="modal" data-bs-target="#ivan">
+            <img src="/images/profile_icons/ivan.png" alt="PNG">
+            <span>проф. д-р Иван Иванов</span>
+        </button>
+        <button type="button" class="profile_icons" data-price="900" data-mode="both" data-bs-toggle="modal" data-bs-target="#jana">
+            <img src="/images/profile_icons/jana.png" alt="PNG">
+            <span>проф. д-р Јана Јаневска</span>
+        </button>
+        <button type="button" class="profile_icons" data-price="750" data-mode="online" data-bs-toggle="modal" data-bs-target="#kosta">
+            <img src="/images/profile_icons/kosta.png" alt="PNG">
+            <span>проф. д-р Коста Костадиновски</span>
+        </button>
+        <button type="button" class="profile_icons" data-price="650" data-mode="online" data-bs-toggle="modal" data-bs-target="#lora">
+            <img src="/images/profile_icons/lora.png" alt="PNG">
+            <span>проф. д-р Лора Лорадиновска</span>
+        </button>
+    </div>
+
+    <p id="no_matches" class="container" style="display: none;">Нема тутори за избраниот филтер.</p>
+
+    <div id="zorica" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/zorica.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Зорица Здравеска</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>zorica.zdraveskaen1@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 800 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Во 1994 година, по завршувањето на студиите по англиски јазик и книжевност на Филолошкиот факултет „Блаже Конски“ во Скопје, го добива звањето „професор по англиски јазик и книжевност“. Магистрира на Кралскиот колеџ, при Универзитет во Кембриџ, 1998 година и го стекнува звањето „магистер по филолошки науки од областа на англиската книжевност“. Докторската дисертација ја одбранува на Филолошкиот факултетот во Скопје, 2008 година, стекнувајќи го звањето „доктор по филолошки науки од областа на англиската книжевност“.</p>
+                    <p>Работи на Филолошкиот факултет „Блаже Конски“ во Скопје од 2000 година.</p>
+                    <p>Учествувала во повеќе домашни проекти, организирани од Министерството за култура и од Филолошкиот факултет во Скопје, меѓу кои и „Dickens Bicentenary Event’’, како дел од меѓународниот проект ‘‘Dickens 2012’’ на Британскиот совет за глобално прославување на двестегодишнината од раѓањето на Дикенс.</p>
+                    <p>Реализира повеќе студиски престои во странство каде врши истражувачка работа од областа на англиската книжевност и се доусовршува за настава во полето на англистиката. Држела настава за обука за бележење и консекутивно толкување и работела како хонорарен толкувач за повеќе домашни и меѓународни организации.</p>
+                    <p>Учествувала во многу меѓународни, регионални и домашни конференции за британската книжевност во Оксфорд, Истамбул, Скопје и други.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="ivan" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/ivan.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Иван Иванов</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>ivan.ivanoven2@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 600 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирал на Катедрата по англиски јазик и книжевност на Филолошкиот факултет „Блаже Конески“ Скопје, каде што исто така магистрирал и докторирал во областа Наука за книжевност.</p>
+                    <p>Учествувал на неколку научни проекти, меѓу кои „Подобрување на функционалната писменост во средното образование во Република Северна Македонија“ и „Преглед на македонската книжевност во првите две децении на 21. век“. Исто така учествувал и во повеќе домашни и меѓународни проекти, како што се: “Gender equality today for a sustainable tomorrow” (Родова еднаквост денес за одржливо утре); „Introducing Media Literacy to Future Philologists“ (Воведување на идните филолози во сферата на медиумската писменост)  како дел од програмата „Младите размислуваат“, финансирана од Агенцијата за меѓународен развој на САД (УСАИД) и во други проекти.</p>
+                    <p>Учествувал на бројни меѓународни конференции, а спроведувал и работилници во областа на креативно пишување, како и пишување академски есеи и дипломски трудови.</p>
+                    <p>Има објавено неколку романи и збирки раскази, учествувал во повеќе книжевни фестивали, а негови раскази се преведени на англиски, германски, француски и други јазици.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="jana" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/jana.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Јана Јаневска</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>jana.janevskaen3@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 900 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирала англиски јазик и книжевност на Филолошкиот факултет „Блаже Конески“ во Скопје, каде што во 2010 магистриралa, a во 2016 година докторирала во областа на книжевноста.</p>
+                    <p>Работела на Филолошкиот факултет како лектор по англиски јазик, а потоа како доцент и вонреден професор по американска книжевност. Во 2010 и 2015 работела како лектор по македонски јазик на Државниот Универзитет во Аризона (ASU), а во 2017 година  предавала онлајн курс со професорот Стивен Фолк на Универзитетот во Отава, Канзас. Од 2018 до 2020 предавала на летната школа за креативно пишување Between the Lines при Универзитетот во Ајова, САД.</p>
+                    <p> Добитничка е на повеќе награди и признанија, меѓу кои и Националната американска награда за далечинско учење Blackboard Catalyst Award: Exemplary Course.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="kosta" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/kosta.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Коста Костадиновски</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>kosta.kostadinovskien4@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 750 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирал на Катедрата за англиски јазик и книжевност на Филолошкиот факултет „Блаже Конески“ во Скопје. Завршил втор циклус (магистерски) студии во Истражувачкиот центар за англиски јазик и применета лингвистика при Универзитетот во Кембриџ, Велика Британија. Дипломирал на Филолошкиот факултет „Блаже Конески“ во Скопје, каде и денес работи како вонреден професор.</p>
+                    <p>Има богато професионално искуство како преведувач/толкувач за меѓународни организации, компании и агенции. Во 2008 година е назначена за постојан судски преведувач од македонски на англиски јазик и обратно од Министерството за правда.</p>
+                    <p>Има посетено бројни семинари, обуки и конференции за професионална надградба во областа на преведувањето. Посебно се издвојуваат посетата на Летната школа за истражување на преводот на Универзитетскиот колеџ Лондон (Лондон, Обединето Кралство), студискиот престој на Универзитетот во Кембриџ за потребите на изработката на докторската дисертација (Кембриџ, Велика Британија), посетата на Летната школа за докторанди и наставници од областа на науката за преведувањето СТРИДОН (Пиран, Словенија), како и годишни конференции на Здружението на преведувачи и толкувачи на Република Северна Македонија.</p>
+                    <p>Има објавено над 40 научно-истражувачки трудови во референтни домашни и меѓународни публикации и учествувувал на голем број меѓународни конференции во земјата и странство.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="lora" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/lora.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Лора Лорадиновска</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>lora.loradinovskaen5@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 650 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирала на Катедрата за англиски јазик и книжевност на Филолошкиот факултет ,,Блаже Конески“ во Скопје. Во 2012 ги завршила магистерските студии, а во 2018 година се стекнала и со научниот степен доктор на филолошки науки.</p>
+                    <p>По дипломирањето работела како професор по англиски јазик во Центарот за странски јазици и на Универзитетот Американ колеџ – Скопје, а од 2014 година е вработена на Филолошкиот факултет “Блаже Конески” во Скопје.</p>
+                    <p>Била вклучена и во повеќе меѓународни проекти: International Corpus of Learner English и Multilingual Student Translation Corpus кои се спроведуваат од Центарот за англиска корпусна лингвистика на Католичкиот универзитет во Лувен, Белгија; Developing applied foreign language skills – DAFLS на Универзитетот во Кан, Нормандија, УКИМ и Европското здружение за локална демократија (АЛДА), како и во проектот Processing Instruction for L3 English: Differences between balanced and unbalanced bilinguals? (PI-BI-L3) на Универзитетот во Салцбург и УКИМ.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="container-fluid" style="background-image: linear-gradient(hsl(255,100%,100%) 45%, hsla(207,96%,73%,0.97))">
+    <div class="container flex_row">
+        <span>&copy;2024 Лесно до матура</span>
+        <ul class="ms-auto">
+            <li><a class="nav-link navbar_link" href="../index.html#hero">Пребарај професор</a></li>
+            <li><a class="nav-link navbar_link" href="../index.html#intro_open">Зошто матура</a></li>
+            <li><a class="nav-link navbar_link" href="../index.html#subjects">Предмети</a></li>
+            <li><a class="nav-link navbar_link" href="../index.html#contact">Придружи се!</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="/script.js"></script>
+</body>
+</html>

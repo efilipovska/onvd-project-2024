@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesno do matura</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-sm">
+        <div class="container flex_row">
+            <img src="images/nav_img.png" alt="Лесно до матура" id="nav_img">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible_navbar" style="border: none">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="collapsible_navbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link navbar_link" href="#hero">Пребарај професор</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar_link" href="#intro_open">Зошто матура</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle navbar_link" href="#" role="button" data-bs-toggle="dropdown">Предмети</a>
+                        <ul class="dropdown-menu nav_dp_menu">
+                            <li><a class="dropdown-item" href="pages/math.html">Математика</a></li>
+                            <li><a class="dropdown-item" href="pages/mk.html">Македонски</a></li>
+                            <li><a class="dropdown-item" href="pages/eng.html">Ангиски</a></li>
+                            <li><a class="dropdown-item" href="pages/fr.html">Француски</a></li>
+                            <li><a class="dropdown-item" href="pages/gr.html">Германски</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar_link" href="#contact">Придружи се!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+    <div class="overlay"></div>
+    <div class="container text-center content">
+        <h1>Лесно до матура!</h1>
+        <h5>Пронајди го својот тутор со само еден клик</h5>
+        <div class="input-group custom_container">
+            <input type="text" id="search" class="form-control" placeholder="Внеси име на професор" style="z-index: 2;">
+            <button id="hero_btn" class="btn" type="submit" onclick="findTutor()">Пребарај</button>
+        </div>
+        <div id="result" class="container flex_row"></div>
+        <p id="not_found" class="container custom_container">Туторот не е пронајден.<br>Погледнете ги достапните професори во секцијата &ndash; <a href="#subjects">предмети</a></p>
+    </div>
+
+    <div id="andrej" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/andrej.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Андреј Атанасоски</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>andrej.andonovmat1@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>понеделник, среда и петок, во 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 850 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Редовен професор на Природно-математичкиот факултет во Скопје, Институтот за математика.
+                        <br><b>Научен степен:</b> Доктор на математички науки
+                        <br><b>Област:</b> Алгебра
+                        <br><b>Предмети:</b> Линеарна алгебра, Геометрија, Алгебра 1, Алгебра 2, Конечна математика, Теорија на броеви.
+                        <br><b>Области на интерес:</b> Универзална алгебра, векторско вредносни алгебaрски структури.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="bogdan" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/bogdan.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Богдан Богдановски</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>bogdan.bogdanovskimat2@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>понеделник, среда и петок, во 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 700 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Редовен професор на Природно-математичкиот факултет во Скопје, Институтот за математика.
+                        <br><b>Научен степен:</b> Доктор на математички науки
+                        <br><b>Област:</b> Применета математика, оптимизација.
+                        <br><b>Предмети:</b> Математичко програмирање, Статистичко моделирање, Операциони истражувања, Модели во актуарска математика, Анализа на временски серии, Оптимизација во финансии, Нумеричка оптимизација, Статистичко моделирање и оптимизација.
+                        <br><b>Области на интерес:</b> Оптимизациони методи, Модели на залихи, Статистичко моделирање.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="vesna" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/vesna.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Весна Ветерова</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>vesna.veterovamat3@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>понеделник, среда и петок, во 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 900 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Редовен професор на Природно-математичкиот факултет во Скопје, Институтот за математика.
+                        <br><b>Научен степен:</b> Доктор на математички науки
+                        <br><b>Област:</b> Топологија, Применета математика и математичко моделирање.
+                        <br><b>Предмети:</b> Компјутерски апликации, Програмски пакети за математика, Примена на компјутерите во наставата по математика, Математички модели во географските информациски системи, Анализа на алгоритми, Динамички системи, моделирање и симулации, Нумерички пресметувања и теорија на фиксна точка.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="dalibor" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/dalibor.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Далибор Дабровски</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>dalibor.dabrovskimat4@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>понеделник, среда и петок, во 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 1000 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Редовен професор на Природно-математичкиот факултет во Скопје, Институтот за математика.
+                        <br><b>Научен степен:</b> Доктор на математички науки
+                        <br><b>Област:</b> Математичка анализа, Диференцијални равенки, Комплексна анализа.
+                        <br><b>Предмети:</b> Диференцијални равенки, Нумеричка математика, Парцијални и интегрални равенки, Моделирање на економски процеси, Диференцијални и диференцни равенки во економија, Диференцијални и парцијални равенки со применa, Приближно решавање на диференцијални и парцијални равенки, Интегрални равенки со примена.
+                        <br><b>Области на интерес:</b> Диференцијални равенки, Ареоларни равенки, Равенка на Векуа.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="ana" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/ana.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Ана Антевска</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>ana.antevskamkd1@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>понеделник, среда и петок, во 13:00, 14:00 и 15:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 700 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирала на Катедрата по македонски јазик и јужнословенски јазици на Филолошкиот факултет „Блаже Конески“ во Скопје во 1996 година, каде магистрирала во 2002 година и докторирала во 2012 година.</p>
+                    <p>По завршувањето на студиите работела како помлад асистент на Катедрата за македонски јазик и јужнословенски јазици на Филолошкиот факултет во Скопје, од 2003 година работела како асистент по предметот современ македонски јазик, од 2013 година работела како доцент, од декември 2018 година како вонреден професор, а од 2022 година како редовен професор на Катедрата по македонски јазик и јужнословенски јазици на Филолошкиот факултет „Блаже Конески“ во Скопје.
+                        <br><br>Учествувала во бројни проекти, како што се:</p>
+                    <ul>
+                        <li>Проект на Министерството за информатичко општество и администрација за стандардизација на македонската терминологија од областа на информатичко-комуникациската техника;</li>
+                        <li>Проект на Секретаријатот за европски прашања при Владата на Република Северна Македонија за стандардизација на правната терминологија;</li>
+                        <li>Правопис на македонскиот стандарден јазик, проект на Министерството за култура (дел од Националната стратегија за развој на културата);</li>
+                        <li>Меѓународен научен проект – Надградување на студиските програми по македонски јазик како странски  (Macedonian as a Foreign Language Curriculum Upgrading – MaFoLaC: 158638-TEMPUS-1-2009-1-MK-TEMPUS-JPSR) и други.</li>
+                    </ul>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="bojan" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/bojan.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Бојан Бојановски</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>bojan.bojanovskimkd2@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>понеделник, среда и петок, во 13:00, 14:00 и 15:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 550 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Филолошки факултет завршил во Скопје во 1996 година, каде магистрирал во 2000 година  и докторирал во 2006 година.</p>
+                    <p>Во периодот од 1998 до 2000 година работел како истражувач во Институтот за македонски јазик „Крсте Мисирков“ во Скопје. Од 2002 година работи на Катедрата за македонски јазик и јужнословенски јазици на Филолошкиот факултет „Блаже Конески“  во Скопје, најнапред како помлад асистент, потоа како асистент (2004-2006), доцент (2007-2013), вонреден професор (2014-2019), а од 2020 година како редовен професор.</p>
+                    <p>Бил учесник во националниот научен проект на Министерството за култура „Правопис на македонскиот јазик“, учествувал и во меѓународниот научен проект од програмата Темпус “Macedonian as a foreign Language Curriculum Upgrading – MaFoLaC”: 158638-TEMPUS-1-2009-1-MK-TEMPUS-JPCR – 2010-2012, учествувал како јазичен редактор на македонската паралела на: “Eurovoc 4.4 – the EU`s multilingual thesaurus” (http://eurovoc.europa.eu/) во меѓународниот научен проект во огранизација на македонската канцеларија на NDI – National Institute for International Affairs, Washington).</p>
+                    <p>Бил раководител на ЦЕТИС МАК – Центарот за тестирање и сертифицирање на македонскиот јазик како странски, при Филолошкиот факултет „Блаже Конески“ и член Советот за македонски јазик при Владата на Република Северна Македонија и Комисијата за полагање лекторски испит при Министерството за култура.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="dejan" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/dejan.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Дејан Дејановски</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>dejan.dejanovskimkd5@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>понеделник, среда и петок, во 13:00, 14:00 и 15:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 750 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Во 2010 година дипломирал на Катедрата за македонски јазик,  во 2014 година магистрирал, а во 2021 година докторирал на Филолошкиот факултет „Блаже Конески“ во Скопје. </p>
+                    <p>На Катедрата за македонски јазик бил ангажиран како демонстратор и надворешен соработник по предметите Современ македонски јазик и Граматика на македонскиот јазик, а од декември 2019 година е асистент на Катедрата за македонски јазик, а во октомври 2022 година е избран за доцент.</p>
+                    <p>Го има положено лекторскиот испит, јазичен редактор е на голем број публикации, а бил ангажиран како лектор на повеќе школи на Семинарот за македонски јазик, литература и култура и како лектор по македонски јазик на Европскиот кампус за јазици и превод (Campus européen L.E.T.F.I.S.) во Париз, Франција.</p>
+                    <p>Учествувал во повеќе проекти, меѓу кои и DAFLS (Developing Applied Foreign Language Skills/ Развивање програма за додипломски и постдипломски студии по применети јазици) (Универзитет во Кан, Франција/Филолошкиот факултет „Блаже Конески“) и голем број лингвистички конференции. Бил член на повеќе организациски одбори на конференции и на редакциски одбори на зборници од таа област.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="goran" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/goran.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Горан Гордевски</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>goran.gordevskimkd4@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>понеделник, среда и петок, во 13:00, 14:00 и 15:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 950 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирал на групата Македонски јазик на Филолошкиот факултет во Скопје во 1994 година, магистрирал на истиот факултет во 2000 година, а докторирал во 2025 година.</p>
+                    <p>Од 2000 година работи на Катедрата за македонски јазик и јужнословенски јазици на Филолошкиот факултет „Блаже Конески“  во Скопје, најнапред како помлад асистент, потоа како асистент, доцент, вонреден професор, а од 2020 година како редовен професор.</p>
+                    <p>Бил повеќегодишен лектор и предавач на Меѓународниот семинар за македонски јазик, литература и култура во Охрид, учествувал во голем број национални и меѓународни научноистражувачки проекти: Целокупни дела на Блаже Конески (критичко издание), Македонска академија на науките и уметностите; Местото на македонскиот јазик во словенскиот и во балканскиот јазичен свет, ИЦАЛ, МАНУ; Граматички опис на македонскиот јазик ИЦАЛ, МАНУ; Правопис на македонскиот стандарден јазик, Министерство за култура  и други.</p>
+                    <p>Бил член на организацискиот одбор на повеќе домашни и меѓународни научни собири и конференции одржани на Филолошкиот факултет „Блаже Конески”во Скопје и рецензент на повеќе монографии и на статии во меѓународни научни списанија.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="evgenija" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/evgenija.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Евгенија Ефтимова</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>evgenija.eftimovakd6@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>понеделник, среда и петок, во 13:00, 14:00 и 15:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 650 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>По завршувањето на студиите работи како демонстратор на Катедрата за македонски јазик и јужнословенски јазици на Филолошкиот факултет ,,Блаже Конески” во Скопје, а од 2005 година е вработена како помлад асистент на Катедрата. Во 2010 година го одбранила магистерскиот труд, а во 2016 година и докторската дисертација. </p>
+                    <p>Таа е вонреден професор на Катедрата за македонски јазик и јужнословенски јазици. Од вработувањето на Филолошкиот факултет ,,Блаже Конески” па до сега, одржува(ла) настава по Граматика на македонскиот јазик, Македонски јазик за странци, Македонски јазик – култура на говор, Македонски јазик – вештини на правилно пишување, Правопис и правоговор на македонскиот јазик, а учествува и во одржување настава на втор циклус студии од студиската програма Македонски јазик.</p>
+                    <p>Има објавено над 30  научни/стручни трудови од областа на македонистиката во домашни/странски списанија и зборници, учествувала во шест научно-истражувачки проекти, како домашни, така меѓународни и билатерални. Таа е лиценциран лектор по македонски јазик, во рамките на ЦЕТИС МАК е сертифициран составувач и оценувач на тестови по македонски јазик како странски и била член на Советот за македонски јазик при Владата на Република Северна Македонија.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="zorica" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/zorica.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Зорица Здравеска</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>zorica.zdraveskaen1@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 800 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Во 1994 година, по завршувањето на студиите по англиски јазик и книжевност на Филолошкиот факултет „Блаже Конски“ во Скопје, го добива звањето „професор по англиски јазик и книжевност“. Магистрира на Кралскиот колеџ, при Универзитет во Кембриџ, 1998 година и го стекнува звањето „магистер по филолошки науки од областа на англиската книжевност“. Докторската дисертација ја одбранува на Филолошкиот факултетот во Скопје, 2008 година, стекнувајќи го звањето „доктор по филолошки науки од областа на англиската книжевност“.</p>
+                    <p>Работи на Филолошкиот факултет „Блаже Конски“ во Скопје од 2000 година.</p>
+                    <p>Учествувала во повеќе домашни проекти, организирани од Министерството за култура и од Филолошкиот факултет во Скопје, меѓу кои и „Dickens Bicentenary Event’’, како дел од меѓународниот проект ‘‘Dickens 2012’’ на Британскиот совет за глобално прославување на двестегодишнината од раѓањето на Дикенс.</p>
+                    <p>Реализира повеќе студиски престои во странство каде врши истражувачка работа од областа на англиската книжевност и се доусовршува за настава во полето на англистиката. Држела настава за обука за бележење и консекутивно толкување и работела како хонорарен толкувач за повеќе домашни и меѓународни организации.</p>
+                    <p>Учествувала во многу меѓународни, регионални и домашни конференции за британската книжевност во Оксфорд, Истамбул, Скопје и други.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="ivan" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/ivan.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Иван Иванов</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>ivan.ivanoven2@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 600 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирал на Катедрата по англиски јазик и книжевност на Филолошкиот факултет „Блаже Конески“ Скопје, каде што исто така магистрирал и докторирал во областа Наука за книжевност.</p>
+                    <p>Учествувал на неколку научни проекти, меѓу кои „Подобрување на функционалната писменост во средното образование во Република Северна Македонија“ и „Преглед на македонската книжевност во првите две децении на 21. век“. Исто така учествувал и во повеќе домашни и меѓународни проекти, како што се: “Gender equality today for a sustainable tomorrow” (Родова еднаквост денес за одржливо утре); „Introducing Media Literacy to Future Philologists“ (Воведување на идните филолози во сферата на медиумската писменост)  како дел од програмата „Младите размислуваат“, финансирана од Агенцијата за меѓународен развој на САД (УСАИД) и во други проекти.</p>
+                    <p>Учествувал на бројни меѓународни конференции, а спроведувал и работилници во областа на креативно пишување, како и пишување академски есеи и дипломски трудови.</p>
+                    <p>Има објавено неколку романи и збирки раскази, учествувал во повеќе книжевни фестивали, а негови раскази се преведени на англиски, германски, француски и други јазици.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="jana" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/jana.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Јана Јаневска</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>jana.janevskaen3@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 900 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирала англиски јазик и книжевност на Филолошкиот факултет „Блаже Конески“ во Скопје, каде што во 2010 магистриралa, a во 2016 година докторирала во областа на книжевноста.</p>
+                    <p>Работела на Филолошкиот факултет како лектор по англиски јазик, а потоа како доцент и вонреден професор по американска книжевност. Во 2010 и 2015 работела како лектор по македонски јазик на Државниот Универзитет во Аризона (ASU), а во 2017 година  предавала онлајн курс со професорот Стивен Фолк на Универзитетот во Отава, Канзас. Од 2018 до 2020 предавала на летната школа за креативно пишување Between the Lines при Универзитетот во Ајова, САД.</p>
+                    <p> Добитничка е на повеќе награди и признанија, меѓу кои и Националната американска награда за далечинско учење Blackboard Catalyst Award: Exemplary Course.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="kosta" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/kosta.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Коста Костадиновски</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>kosta.kostadinovskien4@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 750 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирал на Катедрата за англиски јазик и книжевност на Филолошкиот факултет „Блаже Конески“ во Скопје. Завршил втор циклус (магистерски) студии во Истражувачкиот центар за англиски јазик и применета лингвистика при Универзитетот во Кембриџ, Велика Британија. Дипломирал на Филолошкиот факултет „Блаже Конески“ во Скопје, каде и денес работи како вонреден професор.</p>
+                    <p>Има богато професионално искуство како преведувач/толкувач за меѓународни организации, компании и агенции. Во 2008 година е назначена за постојан судски преведувач од македонски на англиски јазик и обратно од Министерството за правда.</p>
+                    <p>Има посетено бројни семинари, обуки и конференции за професионална надградба во областа на преведувањето. Посебно се издвојуваат посетата на Летната школа за истражување на преводот на Универзитетскиот колеџ Лондон (Лондон, Обединето Кралство), студискиот престој на Универзитетот во Кембриџ за потребите на изработката на докторската дисертација (Кембриџ, Велика Британија), посетата на Летната школа за докторанди и наставници од областа на науката за преведувањето СТРИДОН (Пиран, Словенија), како и годишни конференции на Здружението на преведувачи и толкувачи на Република Северна Македонија.</p>
+                    <p>Има објавено над 40 научно-истражувачки трудови во референтни домашни и меѓународни публикации и учествувувал на голем број меѓународни конференции во земјата и странство.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="lora" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/lora.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Лора Лорадиновска</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>lora.loradinovskaen5@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 650 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирала на Катедрата за англиски јазик и книжевност на Филолошкиот факултет ,,Блаже Конески“ во Скопје. Во 2012 ги завршила магистерските студии, а во 2018 година се стекнала и со научниот степен доктор на филолошки науки.</p>
+                    <p>По дипломирањето работела како професор по англиски јазик во Центарот за странски јазици и на Универзитетот Американ колеџ – Скопје, а од 2014 година е вработена на Филолошкиот факултет “Блаже Конески” во Скопје.</p>
+                    <p>Била вклучена и во повеќе меѓународни проекти: International Corpus of Learner English и Multilingual Student Translation Corpus кои се спроведуваат од Центарот за англиска корпусна лингвистика на Католичкиот универзитет во Лувен, Белгија; Developing applied foreign language skills – DAFLS на Универзитетот во Кан, Нормандија, УКИМ и Европското здружение за локална демократија (АЛДА), како и во проектот Processing Instruction for L3 English: Differences between balanced and unbalanced bilinguals? (PI-BI-L3) на Универзитетот во Салцбург и УКИМ.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="maja" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/maja.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Маја Мајановска</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>maja.majanovskafr1@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот </span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 600 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирала на Филолошкиот факултет „Блаже Конески“ во Скопје, на Катедрата за француски јазик и книжевност. Магистрирала на Филолошкиот факултет во Белград, а со научниот степен доктор на филолошки науки се стекнала на  Филолошкиот факултет „Блаже Конески“ во Скопје во 2010 година.</p>
+                    <p>Од 1998 година работи на Филолошкиот факултет „Блаже Конески“ во Скопје (помлад асистент, асистент, доцент, вонреден професор и редовен професор), а држи предавања и на Катедрата за преведување и толкување. Предава предмети од областа на граматиката на францускиот јазик (морфосинтакса, синтакса) и симултано толкување од француски на македонски јазик. Била ментор и член на комисии за одбрана на голем број дипломски, магистерски и докторски трудови. Учествувала на голем број домашни и меѓународни конференции.</p>
+                    <p>Учествувала во повеќе  национални и меѓународни научно-истржувачки проекти:  Méthodologies et pratiques innovantes en didactique du FLE (MEPRID – FLE); Македонско-романистички јазични, книжевни и преведувачки релации, Филолошки факултет „Блаже Конески“; Јазик, литература и култура во романскиот простор: традиција и иновација, Филолошки факултет „Блаже Конески“ и други.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="nenad" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/nenad.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Ненад Неделковски</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>nenad.nedelkovskifr2@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот </span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 750 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирал на Филолошкиот факултет „Блаже Конески“ во Скопје стекнувајќи се со диплома за Професор по француски јазик и книжевност и дипломиран филолог преведувач по француски јазик (1992 година).  Магистрирал во 1998 година на истиот факултет, каде што и докторирал на тема од областа на контрастивната лингвистика (2007 година).</p>
+                    <p>Од 1999 година работи и предава предмети од областа на контрастивната анализа на францускиот и на македонскиот јазик и преведувањето на Групата за француски јазик и книжевност при Катедрата за романски јазици и книжевности на Филолошкиот факултет „Блаже Конески“ најпрво како помлад асистент, а потоа и како асистент, доцент, вонреден и редовен професор.</p>
+                    <p>Учествувал во бројни меѓународни и национални научни и други проекти: Histoire de la traduction littéraire en Europe médiane (ИНАЛКО, Париз), Македонско-романистички јазични, книжевни и преведувачки релации (Филолошки факултет „Блаже Конески“); DAFLS – Развивање програма за додипломски и последипломски студии по применети странски јазици (ЕРАЗМУС К2+, Универзитет во Каен, Франција) и други.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="olivija" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/olivija.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Оливија Олева</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>olivija.olevafr3@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот </span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 550 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирала на Катедрата за романски јазици и книжевности, група француски јазик и книжевност при Филолошкиот факултет „Блаже Конески” во Скопје во 1995 година и се стекнала со диплома професор по француски јазик и книжевност и дипломиран филолог-преведувач по француски јазик. Во 1998 година завршила втор циклус (магистерски) студии и 2002 година докторски студии во областа на француската книжевност и цивилизација на Универзитетот Париз-Сорбона,Франција, по што се здобила со научниот степен доктор по филолошки науки.</p>
+                    <p>Нејзиниот работен однос на Филолошкиот факултет „Блаже Конески” започнал во 2005 година во звањето доцент по предметот француска книжевност, во 2010 година била избрана за вонреден професор, а во 2016 година во звањето редовен професор на Катедра за романски јазици и книжевности, група: Француски јазик и книжевност, како и на Катедрата за преведување и толкување при филолошки факултет „Блаже Конески” Скопје.</p>
+                    <p>Учествувала во многубројни државни и меѓународни проекти поддржани од Меѓународната организација на Франкофонијата, Меѓународната федерацијата на професорите по француски јазик, Универзитетската Агенција на Франкофонијата (Проект за отворање на Центар за Универзитетска Успешност Le Très-FLE на УАФ при УКИМ и проект за отворање на Франкофонскиот центар за вработливост – Скопје и други.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="petar" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/petar.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Петар Петровски</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>petar.petrovskigerm1@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 700 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Во 2008 година дипломирал на Катедрата за германски јазик и книжевност при Филолошкиот факултет „Блаже Конески“ во Скопје и го стекнала називот професор по германски јазик и книжевност. На истиот факултет во 2012 годинаго одбранил својот магистерски труд, а во 2016 година и својата докторска дисертација.</p>
+                    <p>Во 2013 година бил избран во звањето помлад асистент во областа Граматика на германскиот јазик, а во 2014 година се стекнал  со звањето лектор. Во 2017 година бил избран во доцент за областите Германистика, Применета лингвистика и Компаративна лингвистика, а во 2021 година во вонреден професор за истите области.</p>
+                    <p>Учествувал во повеќе проекти, меѓу кои: „Гралис-мак“ во рамките на проектот „Гралис“ на Институтот за славистика при Универзитетот „Карл-Франц“ во Грац, Австрија и Филолошкиот факултет „Блаже Конески“ – Скопје, Семинар за високошколска дидактика на Педагошкиот факултет во Нирнберг, Семинар за усовршување на асистенти во областа на германистиката, во организација на Фондацијата Роберт Бош и ДААД во Варна, Годишна конференција на Австриското здружение на наставници по германски како странски јазик во Виена и многу други.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="renata" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/renata.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Рената Ристова</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>renata.ristovagerm2@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 500 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Додипломски и постдипломски студии завршила на Филолошкиот факултет „Блаже Конески“во Скопје, каде што и докторилала во 2004 година.</p>
+                    <p>Од март 1996 година, врабoтена е на Филолошкиот факултет „Блаже Конески“ во Скопје, до како помлад асистент, потоа како асистент по предметите од областа на граматиката на современиот германски јазик. Во 2004 година е избрана во звањето доцент, а во 2010 година во звањето вонреден професор. Со звањето редовен професор се стекнала во 2016 година во наставно-научните области германистика, компаративна лингвистика, фонетика, фонологија, лексикологија и преведување.</p>
+                    <p>Учествувала во повеќе национални и меѓународни научноистражувачки проекти и мрежи за академска мобилност (МАНУ, PHARE TEMPUS, ЕРАЗМУС+ DAAD, ÖAD и други). Автор е на над 60 научни трудови од областа на германистичката и на компаративната лингвистика. Освен со наставно-научната дејност, се занимава и со превод и конференциско толкување од македонски на германски јазик и обратно.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sonja" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/sonja.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Соња Сотирова</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>sonja.sotirovagerm3@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 650 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирала на Катедрата за германски јазик и книжевност на Филолошкиот факултет „Блаже Конески“ во Скопје во 2009 година. На оваа Kатедра во 2012 година го одбранува магистерскиот труд, а во 2016 година и својата докторска дисертација.</p>
+                    <p>Во 2017 година била избран во доцент за областите Германистика и Компаративна лингвистика, а во 2022 година во вонреден професор за истите области.</p>
+                    <p>Поседува повеќе лиценци за проверка на германскојазичните компетенции според стандардите на Европските јазични сертификати „Телк дојч“ за различни јазични нивоа и една лиценца за администрирање на стандардизираниот тест по германски како странски јазик „Тест-даф“.</p>
+                    <p>Остварила неколкумесечен студиски престој на Универзитетот во Келн, Германија, членува во Клубот на алумни на Германската служба за академска размена (ДААД) и на фондацијата „Александар фон Хумболт“.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INTRO -->
+<section id="intro_open" class="container-fluid">
+    <div class="container">
+        <h1 class="text-center intro_title">Зошто е важна матурата?</h1>
+        <div class="custom_container">
+            <button id="intro_btn" class="btn" data-bs-toggle="collapse" data-bs-target="#intro" onclick="changeButtonText()">Прикажи повеќе!</button>
+        </div>
+    </div>
+    <section id="intro" class="container collapse">
+        <p>Матурата е многу значаен дел во образовниот процес во многу земји во светот. Државна матура е збир од повеќе екстерни и интерни испити со кои се проверуваат и се вреднуваат знаењата, вештините и способностите на учениците кои ги стекнале во четиригодишно средно образование.
+            <br><br>Спроведувањето на државната матура во четиригодишното средно образование има за цел:</p>
+        <ul>
+            <li>подигање на општото ниво на знаења, умеења и способности кај учениците;</li>
+            <li>следење и контрола на реализацијата на наставните програми;</li>
+            <li>заокружување на образованието со испит и стекнување диплома за завршено средно образование;</li>
+            <li>поквалитетна и поправедна селекција при влезот во високото образование;</li>
+            <li>информирање на учениците, родителите и образовните институции за постигањата на учениците добиени по пат на валидни и веродостојни мерења.</li>
+        </ul>
+
+        <p>Матурантите полагаат: два екстерни испити, два интерни испити и проектна задача.</p>
+
+        <br>
+        <ol>
+            <li>
+                Екстерен дел
+                <ul>
+                    <li>Задолжителен наставен предмет: Македонски јазик и литература или Албански јазик и литература или Турски јазик и литература (во зависност од тоа на кој наставен јазик ученикот ја следи наставата);</li>
+                    <li>Изборен наставен предмет: Математика или странски јазик (Англиски јазик или Француски јазик или Германски јазик или Руски јазик).</li>
+                </ul>
+            </li>
+            <li>
+                Интерен дел
+                <ul>
+                    <li>Два изборни наставни предмети: се бираат од Листата на општообразовни наставни предмети за полагање државна матура (Математика, Странски јазик (англиски, француски, германски и руски), Физика, Хемија, Биологија, Историја, Филозофија, Социологија, Географија, Информатика, Класични јазици, Ликовна уметност, Музичка уметност и Македонски јазик и литература (за учениците што наставата ја следат на албански или турски јазик);</li>
+                    <li>Изборен предмет може да биде наставен предмет кој исполнува еден од следните критериуми: наставен предмет што се изучува најмалку две учебни години со најмалку два часа неделен фонд или наставен предмет што се изучува со најмалку 138 часа вкупен фонд.</li>
+                </ul>
+            </li>
+            <li>
+                Проектна задача
+                <ul>
+                    <li>Проектната задача се избира од наставните предмети и области за кои се определил ученикот.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <p>Подетални информации во врска со матурата можете да добиете на следнава веб страна <a href="http://matura.gov.mk/">www.matura.gov.mk</a></p>
+    </section>
+</section>
+
+<!-- SUBJECTS -->
+<section class="container">
+    <h1 class="text-center intro_title">Пребарај според предмет</h1>
+</section>
+<section id="subjects" class="container">
+    <a class="subject" href="pages/math.html">
+        <img src="images/subjects/math.png" alt="математика" class="subject_img">
+        <h4 class="text-center">Математика</h4>
+    </a>
+    <a class="subject" href="pages/mk.html">
+        <img src="images/subjects/macedonian.png" alt="македонски" class="subject_img">
+        <h4 class="text-center">Македонски</h4>
+    </a>
+    <a class="subject" href="pages/eng.html">
+        <img src="images/subjects/english.png" alt="англиски" class="subject_img">
+        <h4 class="text-center">Англиски</h4>
+    </a>
+    <a class="subject" href="pages/fr.html">
+        <img src="images/subjects/french.png" alt="француски" class="subject_img">
+        <h4 class="text-center">Француски</h4>
+    </a>
+    <a class="subject" href="pages/gr.html">
+        <img src="images/subjects/german.png" alt="германски" class="subject_img">
+        <h4 class="text-center">Германски</h4>
+    </a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container-fluid">
+    <div class="container">
+        <h1 class="text-center intro_title">Сакаш да бидеш тутор?</h1>
+        <h5 class="text-center" style="padding-top: 0.5rem">Пратете маил со вашата кратка биографија и контакт информации на</h5>
+        <div id="mail" class="text-center"><div>lesnodomatura&commat;gmail.com</div></div>
+    </div>
+</section>
+
+<footer class="container-fluid">
+    <div class="container flex_row">
+        <span>&copy;2024 Лесно до матура</span>
+        <ul class="ms-auto">
+            <li><a class="nav-link navbar_link" href="#hero">Пребарај професор</a></li>
+            <li><a class="nav-link navbar_link" href="#intro_open">Зошто матура</a></li>
+            <li><a class="nav-link navbar_link" href="#subjects">Предмети</a></li>
+            <li><a class="nav-link navbar_link" href="#contact">Придружи се!</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

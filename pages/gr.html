@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesno do matura</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-sm">
+        <div class="container flex_row">
+            <img src="/images/nav_img.png" alt="Лесно до матура" id="nav_img">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible_navbar" style="border: none">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="collapsible_navbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link navbar_link" href="../index.html#hero">Пребарај професор</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar_link" href="../index.html#intro_open">Зошто матура</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle navbar_link" href="#" role="button" data-bs-toggle="dropdown">Предмети</a>
+                        <ul class="dropdown-menu nav_dp_menu">
+                            <li><a class="dropdown-item" href="math.html">Математика</a></li>
+                            <li><a class="dropdown-item" href="mk.html">Македонски</a></li>
+                            <li><a class="dropdown-item" href="eng.html">Ангиски</a></li>
+                            <li><a class="dropdown-item" href="fr.html">Француски</a></li>
+                            <li><a class="dropdown-item" href="#">Германски</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar_link" href="../index.html#contact">Придружи се!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- INTRO -->
+<section class="hero" style="background-image: url('/images/backgrounds/gr_bg.png')">
+    <div class="overlay"></div>
+    <div class="container content">
+        <h1 class="text-center intro_title">Германски јазик</h1>
+        <p>Максималниот број бодови на тестот 65, а времето на решавање е 180 минути.</p>
+        <p>Општата цел на испитот по Германски јазик е да се провери на кое ниво учениците се оспособени да разберат прочитан текст, да напишат и применат јазични елементи во контекст.</p>
+
+        <button id="intro_btn" class="btn btn_collapse" data-bs-toggle="collapse" data-bs-target="#fr_collapse" onclick="changeButtonText()">Прикажи повеќе!</button>
+
+        <div id="fr_collapse" class="collapse">
+            <p>Проверката на знаењата и способностите на учениците се реализира преку тест кој содржи три дела:</p>
+            <ul>
+                <li>Со делот Читање се проверува: колку учениците ја разбираат главната идеја во даден текст на германски јазик, како ја разбираат логичната поврзаност на речениците и колку ги разбираат лексичките и граматичките обрасци во текстот.Ова подрачје во тестот се проверува преку неколку типа прашања: прашања со повеќечлен избор, прашања со поврзување и прашања со пополнување празнини во текст. Вкупниот број бодови на овие прашања изнесува 20.</li>
+                <li>Со делот Пишување се проверуваат две цели – оспособеноста на учениците да напишат кусо писмо (формално и неформално) и оспособеноста да напишат јасен текст на позната тема. Делот Пишување во тестот е застапен со прашања чиј вкупен број бодови е 35, а делот Примена на јазични елементи во контекст е застапен со број на прашања чиј вкупен број бодови е 10.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- TESTS -->
+<section class="container">
+    <h1 class="text-center intro_title">Тестови</h1>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-action">
+            <a class="nav-link" target="_blank" href="http://www.matura.gov.mk/data_files/state_graduate/mk/3613_Germanski%20jazik%20JUNI%202024.pdf">
+                <div class="pdfs">
+                    <img src="/images/pdf_icon.png" alt="PDF" class="pdf_icon">
+                    <h6>Германски јазик тест 2024</h6>
+                </div>
+            </a>
+        </li>
+        <li class="list-group-item list-group-item-action">
+            <a class="nav-link" target="_blank" href="http://www.matura.gov.mk/data_files/state_graduate/mk/3748_MATURA_Germanski_jazik_2020-2023.pdf">
+                <div class="pdfs">
+                    <img src="/images/pdf_icon.png" alt="PDF" class="pdf_icon">
+                    <h6>Германски јазик збирка тестови 2020 &ndash; 2023</h6>
+                </div>
+            </a>
+        </li>
+        <li class="list-group-item list-group-item-action">
+            <a class="nav-link" target="_blank" href="http://www.matura.gov.mk/data_files/state_graduate/mk/2823_MATURA_Germanski_jazik_2016-2019.pdf">
+                <div class="pdfs">
+                    <img src="/images/pdf_icon.png" alt="PDF" class="pdf_icon">
+                    <h6>Германски јазик збирка тестови 2016 &ndash; 2019</h6>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- TUTORS -->
+<section class="container">
+    <h1 class="text-center intro_title">Тутори</h1>
+    <div class="container flex_row">
+        <div class="dropdown">
+            <button type="button" class="btn dropdown-toggle btn_dropdown" data-bs-toggle="dropdown">Сортирај</button>
+            <ul class="dropdown-menu dp_menu">
+                <li><a id="sortLH" class="dropdown-item" href="#" onclick="event.preventDefault()">Цена (најниска)</a></li>
+                <li><a id="sortHL" class="dropdown-item" href="#" onclick="event.preventDefault()">Цена (највисока)</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button type="button" class="btn dropdown-toggle btn_dropdown" data-bs-toggle="dropdown">Филтрирај</button>
+            <ul class="dropdown-menu dp_menu">
+                <li><a id="all" class="dropdown-item" href="#" onclick="event.preventDefault()">Прикажи ги сите</a></li>
+                <li><a id="online" class="dropdown-item" href="#" onclick="event.preventDefault()">Online часови</a></li>
+                <li><a id="person" class="dropdown-item" href="#" onclick="event.preventDefault()">Часови со физичко присуство</a></li>
+                <li><a id="both" class="dropdown-item" href="#" onclick="event.preventDefault()">По избор (двата типа)</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tutors">
+        <button type="button" class="profile_icons" data-price="700" data-mode="both" data-bs-toggle="modal" data-bs-target="#petar">
+            <img src="/images/profile_icons/petar.png" alt="PNG">
+            <span>проф. д-р Петар Петровски</span>
+        </button>
+        <button type="button" class="profile_icons" data-price="500" data-mode="person" data-bs-toggle="modal" data-bs-target="#renata">
+            <img src="/images/profile_icons/renata.png" alt="PNG">
+            <span>проф. д-р Рената Ристова</span>
+        </button>
+        <button type="button" class="profile_icons" data-price="650" data-mode="both" data-bs-toggle="modal" data-bs-target="#sonja">
+            <img src="/images/profile_icons/sonja.png" alt="PNG">
+            <span>проф. д-р Соња Сотирова</span>
+        </button>
+    </div>
+
+    <p id="no_matches" class="container" style="display: none;">Нема тутори за избраниот филтер.</p>
+
+    <div id="petar" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/petar.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Петар Петровски</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>petar.petrovskigerm1@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 700 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Во 2008 година дипломирал на Катедрата за германски јазик и книжевност при Филолошкиот факултет „Блаже Конески“ во Скопје и го стекнала називот професор по германски јазик и книжевност. На истиот факултет во 2012 годинаго одбранил својот магистерски труд, а во 2016 година и својата докторска дисертација.</p>
+                    <p>Во 2013 година бил избран во звањето помлад асистент во областа Граматика на германскиот јазик, а во 2014 година се стекнал  со звањето лектор. Во 2017 година бил избран во доцент за областите Германистика, Применета лингвистика и Компаративна лингвистика, а во 2021 година во вонреден професор за истите области.</p>
+                    <p>Учествувал во повеќе проекти, меѓу кои: „Гралис-мак“ во рамките на проектот „Гралис“ на Институтот за славистика при Универзитетот „Карл-Франц“ во Грац, Австрија и Филолошкиот факултет „Блаже Конески“ – Скопје, Семинар за високошколска дидактика на Педагошкиот факултет во Нирнберг, Семинар за усовршување на асистенти во областа на германистиката, во организација на Фондацијата Роберт Бош и ДААД во Варна, Годишна конференција на Австриското здружение на наставници по германски како странски јазик во Виена и многу други.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="renata" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/renata.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Рената Ристова</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>renata.ristovagerm2@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 500 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Додипломски и постдипломски студии завршила на Филолошкиот факултет „Блаже Конески“во Скопје, каде што и докторилала во 2004 година.</p>
+                    <p>Од март 1996 година, врабoтена е на Филолошкиот факултет „Блаже Конески“ во Скопје, до како помлад асистент, потоа како асистент по предметите од областа на граматиката на современиот германски јазик. Во 2004 година е избрана во звањето доцент, а во 2010 година во звањето вонреден професор. Со звањето редовен професор се стекнала во 2016 година во наставно-научните области германистика, компаративна лингвистика, фонетика, фонологија, лексикологија и преведување.</p>
+                    <p>Учествувала во повеќе национални и меѓународни научноистражувачки проекти и мрежи за академска мобилност (МАНУ, PHARE TEMPUS, ЕРАЗМУС+ DAAD, ÖAD и други). Автор е на над 60 научни трудови од областа на германистичката и на компаративната лингвистика. Освен со наставно-научната дејност, се занимава и со превод и конференциско толкување од македонски на германски јазик и обратно.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div id="sonja" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex_row">
+                    <img src="/images/profile_icons/sonja.png" alt="PNG">
+                    <h4 class="modal-title">проф. д-р Соња Сотирова</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="flex_row">
+                        <img src="/images/email.png" alt="PNG">
+                        <span>sonja.sotirovagerm3@gmail.com</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/clock.png" alt="PNG">
+                        <span>вторник и четврток, во 14:00, 15:00, 16:00, 17:00 и 18:00 часот</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/money.png" alt="PNG">
+                        <span>цена од час: 650 ден.</span>
+                    </div>
+                    <div class="flex_row">
+                        <img src="/images/briefcase.png" alt="PNG">
+                        <span>настава: online и со физичко присуство</span>
+                    </div>
+                    <br>
+                    <h6>Резиме</h6>
+                    <p>Дипломирала на Катедрата за германски јазик и книжевност на Филолошкиот факултет „Блаже Конески“ во Скопје во 2009 година. На оваа Kатедра во 2012 година го одбранува магистерскиот труд, а во 2016 година и својата докторска дисертација.</p>
+                    <p>Во 2017 година била избран во доцент за областите Германистика и Компаративна лингвистика, а во 2022 година во вонреден професор за истите области.</p>
+                    <p>Поседува повеќе лиценци за проверка на германскојазичните компетенции според стандардите на Европските јазични сертификати „Телк дојч“ за различни јазични нивоа и една лиценца за администрирање на стандардизираниот тест по германски како странски јазик „Тест-даф“.</p>
+                    <p>Остварила неколкумесечен студиски престој на Универзитетот во Келн, Германија, членува во Клубот на алумни на Германската служба за академска размена (ДААД) и на фондацијата „Александар фон Хумболт“.</p>
+                </div>
+
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="container-fluid" style="background-image: linear-gradient(hsl(255,100%,100%) 45%, hsla(207,96%,73%,0.97))">
+    <div class="container flex_row">
+        <span>&copy;2024 Лесно до матура</span>
+        <ul class="ms-auto">
+            <li><a class="nav-link navbar_link" href="../index.html#hero">Пребарај професор</a></li>
+            <li><a class="nav-link navbar_link" href="../index.html#intro_open">Зошто матура</a></li>
+            <li><a class="nav-link navbar_link" href="../index.html#subjects">Предмети</a></li>
+            <li><a class="nav-link navbar_link" href="../index.html#contact">Придружи се!</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="/script.js"></script>
+</body>
+</html>
