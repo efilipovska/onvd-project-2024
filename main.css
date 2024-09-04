@@ -61,7 +61,7 @@ footer li:last-child {
 ==============================================
 */
 #hero {
-    background-image: url('images/backgrounds/hero.png');
+    background-image: url('/images/backgrounds/hero.png');
 }
 .hero {
     position: relative;
