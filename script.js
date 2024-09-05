@@ -63,7 +63,7 @@ function findTutor() {
             const tutorImage = foundTutor.modalId.substring(1);
             tutorResult.innerHTML += `
                 <button type="button" class="profile_icons" data-bs-toggle="modal" data-bs-target="${foundTutor.modalId}">
-                    <img src = "/images/profile_icons/${tutorImage}.png" alt = "PNG">
+                    <img src = "images/profile_icons/${tutorImage}.png" alt = "PNG">
                     <span>${foundTutor.name}</span>
                 </button>
             `;
