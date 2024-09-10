@@ -141,6 +141,7 @@ footer li:last-child {
 #intro_btn {
     background-color: hsla(207,96%,73%,0.97);
     width: 100%;
+    border-radius: 1.56rem;
     margin-bottom: 1.56rem;
 }
 #intro_btn:hover {
