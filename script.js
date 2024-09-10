@@ -93,7 +93,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const tutorsContainer = document.querySelector('.tutors');
     const sortLowToHigh = document.getElementById('sortLH');
     const sortHighToLow = document.getElementById('sortHL');
-    const sortTutors = (order) => {
+
+    function sortTutors (order) {
         const tutors = Array.from(tutorsContainer.children);
 
         tutors.sort((a, b) => {
@@ -104,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         tutorsContainer.innerHTML = '';
         tutors.forEach(tutor => tutorsContainer.appendChild(tutor));
-    };
+    }
 
     sortLowToHigh.addEventListener('click', () => sortTutors('lowToHigh'));
     sortHighToLow.addEventListener('click', () => sortTutors('highToLow'));
